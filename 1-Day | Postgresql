@@ -1,0 +1,236 @@
+#main
+create table staff
+(first_name varchar(20),
+last_name varchar(20),
+staff_id int,
+username varchar(20));
+
+create table actor
+(first_name varchar(20),
+last_name varchar(20),
+actor_id int,
+username varchar(20));
+
+create table film
+(description varchar(20),
+title varchar(20),
+film_id int,
+genre varchar(20));
+
+
+#queries for staff table
+select * from staff where first_name like '%s%';
+select * from staff where last_name like '%s%';
+select * from staff where first_name like '%s%' limit 5;
+select * from staff where last_name like '%s%' limit 6;
+select * from staff where username like '%s%';
+select * from staff where username like '%s%' limit 5;
+select * from staff where staff_id is null;
+select * from staff where staff_id is null limit 5;
+select * from staff order by username DESC;
+select * from staff order by username limit 5;
+select * from staff order by staff_id limit 5;
+select * from staff order by staff_id DESC;
+select * from staff order by last_name limit 5;
+select * from staff order by last_name DESC;
+select * from staff order by first_name limit 5;
+select * from staff order by first_name DESC;
+
+
+#queries for actor table
+select * from actor where first_name like '%s%';
+select * from actor where last_name like '%s%';
+select * from actor where first_name like '%s%' limit 5;
+select * from actor where last_name like '%s%' limit 6;
+select * from actor where username like '%s%';
+select * from actor where username like '%s%' limit 5;
+select * from actor where actor_id is null;
+select * from actor where actor_id is null limit 5;
+select * from actor order by username DESC;
+select * from actor order by username limit 5;
+select * from actor order by actor_id limit 5;
+select * from actor order by actor_id DESC;
+select * from actor order by last_name limit 5;
+select * from actor order by last_name DESC;
+select * from actor order by first_name limit 5;
+select * from actor order by first_name DESC;
+
+#queries for film table
+select * from film where genre like '%s%';
+select * from film where title like '%s%';
+select * from film where genre like '%s%' limit 5;
+select * from film where title like '%s%' limit 6;
+select * from film where description like '%s%';
+select * from film where description like '%s%' limit 5;
+select * from film where film_id is null;
+select * from film where film_id is null limit 5;
+select * from film order by description DESC;
+select * from film order by description limit 5;
+select * from film order by film_id limit 5;
+select * from film order by film_id DESC;
+select * from film order by title limit 5;
+select * from film order by title DESC;
+select * from film order by genre limit 5;
+select * from film order by genre DESC;
+
+
+#data for actor
+insert into actor (film_id, title, description, last_update) values (1, 'Punching the Clown', 'Comedy', '07-May-2023');
+insert into actor (film_id, title, description, last_update) values (2, 'Eden', 'Drama', '05-Oct-2022');
+insert into actor (film_id, title, description, last_update) values (3, 'Flypaper', 'Comedy|Crime', '25-Oct-2023');
+insert into actor (film_id, title, description, last_update) values (4, 'Safe', 'Action|Crime|Thriller', '05-Feb-2023');
+insert into actor (film_id, title, description, last_update) values (5, 'Big Store, The', 'Comedy|Musical', '31-Aug-2022');
+insert into actor (film_id, title, description, last_update) values (6, 'Dragon Ball Z: Battle of Gods', 'Action|Animation|Fantasy|IMAX', '21-Feb-2023');
+insert into actor (film_id, title, description, last_update) values (7, 'Dark Shadows', 'Comedy|Horror|IMAX', '30-Nov-2023');
+insert into actor (film_id, title, description, last_update) values (8, 'Coffee Town', 'Comedy', '02-Oct-2023');
+insert into actor (film_id, title, description, last_update) values (9, 'Bronco Billy', 'Adventure|Drama|Romance', '06-Aug-2023');
+insert into actor (film_id, title, description, last_update) values (10, 'Murder by Proxy: How America Went Postal', 'Documentary', '24-May-2023');
+insert into actor (film_id, title, description, last_update) values (11, 'Death in Venice (Morte a Venezia)', 'Drama|Romance', '19-Oct-2023');
+insert into actor (film_id, title, description, last_update) values (12, 'Bring It On: In It To Win It', 'Comedy', '27-Dec-2023');
+insert into actor (film_id, title, description, last_update) values (13, 'Mighty Joe Young', 'Action|Adventure|Drama|Fantasy|Thriller', '02-Oct-2022');
+insert into actor (film_id, title, description, last_update) values (14, 'City of Your Final Destination, The', 'Drama', '02-Dec-2022');
+insert into actor (film_id, title, description, last_update) values (15, 'Down From the Mountain', 'Documentary', '28-Oct-2022');
+insert into actor (film_id, title, description, last_update) values (16, 'Alex in Wonderland', 'Comedy|Drama', '10-Sep-2022');
+insert into actor (film_id, title, description, last_update) values (17, 'Scout, The', 'Comedy|Drama', '15-Oct-2022');
+insert into actor (film_id, title, description, last_update) values (18, 'Shot in the Heart', 'Crime|Drama', '03-Dec-2023');
+insert into actor (film_id, title, description, last_update) values (19, 'Merchants of Doubt', 'Documentary', '27-May-2023');
+insert into actor (film_id, title, description, last_update) values (20, 'Summer of Sam', 'Drama', '19-Aug-2023');
+insert into actor (film_id, title, description, last_update) values (21, 'Dante 01', 'Sci-Fi|Thriller', '10-Jan-2023');
+insert into actor (film_id, title, description, last_update) values (22, 'Night of the Comet', 'Comedy|Horror|Sci-Fi', '04-Sep-2022');
+insert into actor (film_id, title, description, last_update) values (23, 'Vares: The Path of the Righteous Men (Vares - Kaidan tien kulkijat)', 'Crime|Drama', '15-Aug-2023');
+insert into actor (film_id, title, description, last_update) values (24, 'Repeaters ', 'Action|Drama', '05-Jan-2024');
+insert into actor (film_id, title, description, last_update) values (25, 'The Lost Continent', 'Adventure|Fantasy', '03-Nov-2023');
+insert into actor (film_id, title, description, last_update) values (26, 'Margaret Thatcher: The Long Walk to Finchley', 'Drama', '15-Dec-2023');
+insert into actor (film_id, title, description, last_update) values (27, 'Tony Rome', 'Crime|Drama|Thriller', '30-Sep-2023');
+insert into actor (film_id, title, description, last_update) values (28, 'Terraferma', 'Drama', '17-Jan-2024');
+insert into actor (film_id, title, description, last_update) values (29, 'Fun with Dick and Jane', 'Comedy|Crime', '27-Jan-2023');
+insert into actor (film_id, title, description, last_update) values (30, 'Make Mine Music', 'Animation|Children|Musical', '31-Jul-2023');
+insert into actor (film_id, title, description, last_update) values (31, 'Exiled (Fong juk)', 'Action|Crime|Thriller', '19-Mar-2023');
+insert into actor (film_id, title, description, last_update) values (32, 'Long Good Friday, The', 'Drama|Thriller', '27-May-2023');
+insert into actor (film_id, title, description, last_update) values (33, 'Down Terrace', 'Comedy|Crime|Drama', '10-Apr-2023');
+insert into actor (film_id, title, description, last_update) values (34, 'Die Hard 2', 'Action|Adventure|Thriller', '26-Oct-2022');
+insert into actor (film_id, title, description, last_update) values (35, 'Romeo Must Die', 'Action|Crime|Romance|Thriller', '20-Jun-2023');
+insert into actor (film_id, title, description, last_update) values (36, 'Sade', 'Crime|Drama', '10-Jan-2023');
+insert into actor (film_id, title, description, last_update) values (37, 'Dead Man on Campus', 'Comedy', '01-May-2023');
+insert into actor (film_id, title, description, last_update) values (38, 'Henry Poole is Here', 'Drama|Mystery', '22-Nov-2023');
+insert into actor (film_id, title, description, last_update) values (39, 'Prestige, The', 'Drama|Mystery|Sci-Fi|Thriller', '08-Nov-2023');
+insert into actor (film_id, title, description, last_update) values (40, 'Boogie-Doodle', 'Animation', '22-May-2023');
+insert into actor (film_id, title, description, last_update) values (41, 'Startup.com', 'Documentary', '09-Jun-2023');
+insert into actor (film_id, title, description, last_update) values (42, 'Since Otar Left (Depuis qu''Otar est parti...)', 'Drama', '30-May-2023');
+insert into actor (film_id, title, description, last_update) values (43, 'Paralyzing Fear: The Story of Polio in America, A', 'Documentary', '28-Feb-2023');
+insert into actor (film_id, title, description, last_update) values (44, 'Gracie', 'Drama', '30-Nov-2022');
+insert into actor (film_id, title, description, last_update) values (45, 'Dr. Mabuse: The Gambler (Dr. Mabuse, der Spieler)', 'Crime|Mystery|Thriller', '18-May-2023');
+insert into actor (film_id, title, description, last_update) values (46, 'Incendiary', 'Drama|Mystery|Romance|Thriller', '18-Mar-2023');
+insert into actor (film_id, title, description, last_update) values (47, 'Three Stars', 'Documentary', '29-Sep-2022');
+insert into actor (film_id, title, description, last_update) values (48, 'Topaze', 'Comedy', '18-Apr-2023');
+insert into actor (film_id, title, description, last_update) values (49, '10 Years', 'Comedy|Drama|Romance', '13-Jul-2023');
+insert into actor (film_id, title, description, last_update) values (50, 'Terminator 2: Judgment Day', 'Action|Sci-Fi', '19-Dec-2022');
+
+
+
+#data for film
+insert into film (film_id, title, description, last_update) values (1, 'Captive (Cautiva) ', 'Drama', '14-Jul-2023');
+insert into film (film_id, title, description, last_update) values (2, 'Jitney Elopement, A', 'Comedy', '24-Aug-2022');
+insert into film (film_id, title, description, last_update) values (3, 'Good Bye (Bé omid é didar)', 'Drama', '23-Nov-2023');
+insert into film (film_id, title, description, last_update) values (4, 'King Creole', 'Crime|Drama|Musical', '06-Dec-2023');
+insert into film (film_id, title, description, last_update) values (5, 'Legend of Sleepy Hollow, The', 'Comedy|Fantasy|Horror', '29-Jan-2024');
+insert into film (film_id, title, description, last_update) values (6, 'Being Cyrus', 'Comedy|Drama|Thriller', '22-Jun-2023');
+insert into film (film_id, title, description, last_update) values (7, 'Mothlight', 'Documentary', '22-Jan-2023');
+insert into film (film_id, title, description, last_update) values (8, 'Vicky Cristina Barcelona', 'Comedy|Drama|Romance', '18-Dec-2023');
+insert into film (film_id, title, description, last_update) values (9, '3 Backyards', 'Drama', '03-Dec-2022');
+insert into film (film_id, title, description, last_update) values (10, 'Story of Yonosuke, A (Yokomichi Yonosuke)', 'Comedy|Drama', '07-Nov-2022');
+insert into film (film_id, title, description, last_update) values (11, 'Siddhartha', 'Drama', '06-Apr-2023');
+insert into film (film_id, title, description, last_update) values (12, 'Perfect Sense', 'Drama|Romance|Sci-Fi', '16-Sep-2023');
+insert into film (film_id, title, description, last_update) values (13, 'Pretty Baby', 'Drama', '28-Jan-2023');
+insert into film (film_id, title, description, last_update) values (14, 'Red Dragon', 'Crime|Mystery|Thriller', '25-Apr-2023');
+insert into film (film_id, title, description, last_update) values (15, 'Hidden Assassin (Shooter, The)', 'Action|Crime|Drama', '21-Mar-2023');
+insert into film (film_id, title, description, last_update) values (16, 'Merantau', 'Action|Drama', '29-Sep-2023');
+insert into film (film_id, title, description, last_update) values (17, 'Wish Upon a Star', 'Comedy', '23-Aug-2022');
+insert into film (film_id, title, description, last_update) values (18, 'Girl from Monday, The', 'Action|Comedy|Sci-Fi', '04-Dec-2023');
+insert into film (film_id, title, description, last_update) values (19, 'Great Waldo Pepper, The', 'Drama|Romance', '26-Feb-2023');
+insert into film (film_id, title, description, last_update) values (20, 'Tango Kabaree', 'Comedy|Drama', '29-Jul-2023');
+insert into film (film_id, title, description, last_update) values (21, 'V/H/S: Viral', 'Horror|Thriller', '01-Sep-2023');
+insert into film (film_id, title, description, last_update) values (22, 'With Six You Get Eggroll', 'Comedy|Romance', '28-Dec-2023');
+insert into film (film_id, title, description, last_update) values (23, 'Answer Man, The (a.k.a. Arlen Faber)', 'Comedy|Romance', '12-Apr-2023');
+insert into film (film_id, title, description, last_update) values (24, 'Ideal Husband, An', 'Comedy', '23-Oct-2023');
+insert into film (film_id, title, description, last_update) values (25, 'Autobiography of Nicolae Ceausescu, The (Autobiografia lui Nicolae Ceausescu)', 'Documentary', '29-Oct-2023');
+insert into film (film_id, title, description, last_update) values (26, 'Open Your Eyes (Abre los ojos)', 'Drama|Romance|Sci-Fi|Thriller', '18-Nov-2023');
+insert into film (film_id, title, description, last_update) values (27, 'Road to Bali', 'Comedy|Musical', '22-Sep-2022');
+insert into film (film_id, title, description, last_update) values (28, 'Aloha Summer', 'Comedy|Drama', '15-Sep-2022');
+insert into film (film_id, title, description, last_update) values (29, 'Descendant of the Sun (Ri jie)', 'Action|Adventure|Fantasy|Sci-Fi', '07-Apr-2023');
+insert into film (film_id, title, description, last_update) values (30, 'Dead Again', 'Mystery|Romance|Thriller', '24-Sep-2022');
+insert into film (film_id, title, description, last_update) values (31, 'Watching the Detectives', 'Comedy|Romance', '23-Sep-2022');
+insert into film (film_id, title, description, last_update) values (32, 'Submarino', 'Drama', '27-Oct-2023');
+insert into film (film_id, title, description, last_update) values (33, 'Sunny (Sseo-ni)', 'Drama', '06-Jul-2023');
+insert into film (film_id, title, description, last_update) values (34, 'Otello', 'Drama', '02-Aug-2023');
+insert into film (film_id, title, description, last_update) values (35, 'Birdcage Inn (Paran daemun)', 'Drama', '03-Oct-2023');
+insert into film (film_id, title, description, last_update) values (36, 'Winter Solstice', 'Drama', '19-Oct-2023');
+insert into film (film_id, title, description, last_update) values (37, 'Busting', 'Crime|Drama', '27-Aug-2023');
+insert into film (film_id, title, description, last_update) values (38, 'Rebel, The (Le Rebelle)', 'Drama', '20-Oct-2022');
+insert into film (film_id, title, description, last_update) values (39, 'Teenage Mutant Ninja Turtles: Turtles Forever', 'Action|Adventure|Animation|Comedy|Thriller', '09-Jun-2023');
+insert into film (film_id, title, description, last_update) values (40, 'Visitors, The (Visiteurs, Les)', 'Comedy|Fantasy|Sci-Fi', '03-Nov-2022');
+insert into film (film_id, title, description, last_update) values (41, 'Haunted Castle, The (Schloß Vogeloed)', 'Crime|Drama|Horror|Mystery', '20-Oct-2023');
+insert into film (film_id, title, description, last_update) values (42, 'Time Lapse', 'Crime|Drama|Sci-Fi|Thriller', '29-Nov-2022');
+insert into film (film_id, title, description, last_update) values (43, 'Selena', 'Drama|Musical', '06-Jan-2024');
+insert into film (film_id, title, description, last_update) values (44, 'Welcome to Sarajevo', 'Drama|War', '15-Dec-2022');
+insert into film (film_id, title, description, last_update) values (45, 'Red Pony, The', 'Drama', '19-Oct-2022');
+insert into film (film_id, title, description, last_update) values (46, 'The New Babylon', 'Drama', '15-Dec-2022');
+insert into film (film_id, title, description, last_update) values (47, 'Matter of Dignity, A (To teleftaio psema)', 'Drama', '02-Jun-2023');
+insert into film (film_id, title, description, last_update) values (48, 'Starcrash (a.k.a. Star Crash)', 'Action|Adventure|Fantasy|Sci-Fi', '13-Nov-2022');
+insert into film (film_id, title, description, last_update) values (49, 'Slums of Beverly Hills, The', 'Comedy|Drama', '23-Oct-2023');
+insert into film (film_id, title, description, last_update) values (50, 'Sound of Redemption: The Frank Morgan Story', 'Documentary|Drama|Musical', '24-Nov-2022');
+
+
+
+#data for staff
+insert into staff (first_name, staff_id, last_name, username) values ('Genovera', 1, 'Shillabeare', 'gshillabeare0');
+insert into staff (first_name, staff_id, last_name, username) values ('Kaylee', 2, 'Zannelli', 'kzannelli1');
+insert into staff (first_name, staff_id, last_name, username) values ('Odell', 3, 'Mourgue', 'omourgue2');
+insert into staff (first_name, staff_id, last_name, username) values ('Justina', 4, 'O''Flaherty', 'joflaherty3');
+insert into staff (first_name, staff_id, last_name, username) values ('Lucina', 5, 'Benesevich', 'lbenesevich4');
+insert into staff (first_name, staff_id, last_name, username) values ('Ephrem', 6, 'McEvon', 'emcevon5');
+insert into staff (first_name, staff_id, last_name, username) values ('Anderea', 7, 'Luffman', 'aluffman6');
+insert into staff (first_name, staff_id, last_name, username) values ('Rogers', 8, 'Jesse', 'rjesse7');
+insert into staff (first_name, staff_id, last_name, username) values ('Flory', 9, 'De-Ville', 'fdeville8');
+insert into staff (first_name, staff_id, last_name, username) values ('Ivan', 10, 'Loche', 'iloche9');
+insert into staff (first_name, staff_id, last_name, username) values ('Letitia', 11, 'Gamett', 'lgametta');
+insert into staff (first_name, staff_id, last_name, username) values ('Leo', 12, 'Thandi', 'lthandib');
+insert into staff (first_name, staff_id, last_name, username) values ('Raoul', 13, 'Smurthwaite', 'rsmurthwaitec');
+insert into staff (first_name, staff_id, last_name, username) values ('Joachim', 14, 'Fendlow', 'jfendlowd');
+insert into staff (first_name, staff_id, last_name, username) values ('Mellisent', 15, 'Rowlings', 'mrowlingse');
+insert into staff (first_name, staff_id, last_name, username) values ('Haleigh', 16, 'Ortet', 'hortetf');
+insert into staff (first_name, staff_id, last_name, username) values ('Steven', 17, 'Duffill', 'sduffillg');
+insert into staff (first_name, staff_id, last_name, username) values ('Roma', 18, 'Gilbee', 'rgilbeeh');
+insert into staff (first_name, staff_id, last_name, username) values ('Darrick', 19, 'Coppard', 'dcoppardi');
+insert into staff (first_name, staff_id, last_name, username) values ('Joby', 20, 'Kenwright', 'jkenwrightj');
+insert into staff (first_name, staff_id, last_name, username) values ('Michal', 21, 'Blackbrough', 'mblackbroughk');
+insert into staff (first_name, staff_id, last_name, username) values ('Alaric', 22, 'Quillinane', 'aquillinanel');
+insert into staff (first_name, staff_id, last_name, username) values ('Pamelina', 23, 'Andreone', 'pandreonem');
+insert into staff (first_name, staff_id, last_name, username) values ('Paulo', 24, 'Huzzey', 'phuzzeyn');
+insert into staff (first_name, staff_id, last_name, username) values ('Dari', 25, 'Brisset', 'dbrisseto');
+insert into staff (first_name, staff_id, last_name, username) values ('Hallsy', 26, 'Ivushkin', 'hivushkinp');
+insert into staff (first_name, staff_id, last_name, username) values ('Rowland', 27, 'Iacovucci', 'riacovucciq');
+insert into staff (first_name, staff_id, last_name, username) values ('Jennie', 28, 'Loude', 'jlouder');
+insert into staff (first_name, staff_id, last_name, username) values ('Fionnula', 29, 'Ashness', 'fashnesss');
+insert into staff (first_name, staff_id, last_name, username) values ('Guinna', 30, 'Fazackerley', 'gfazackerleyt');
+insert into staff (first_name, staff_id, last_name, username) values ('Woodman', 31, 'Prettyman', 'wprettymanu');
+insert into staff (first_name, staff_id, last_name, username) values ('Svend', 32, 'Berndtsson', 'sberndtssonv');
+insert into staff (first_name, staff_id, last_name, username) values ('Vail', 33, 'Palke', 'vpalkew');
+insert into staff (first_name, staff_id, last_name, username) values ('Elsie', 34, 'Maidstone', 'emaidstonex');
+insert into staff (first_name, staff_id, last_name, username) values ('Odella', 35, 'Hoffman', 'ohoffmany');
+insert into staff (first_name, staff_id, last_name, username) values ('Elvyn', 36, 'Lethbrig', 'elethbrigz');
+insert into staff (first_name, staff_id, last_name, username) values ('Karl', 37, 'Francke', 'kfrancke10');
+insert into staff (first_name, staff_id, last_name, username) values ('Lanni', 38, 'Jeans', 'ljeans11');
+insert into staff (first_name, staff_id, last_name, username) values ('Pall', 39, 'Vida', 'pvida12');
+insert into staff (first_name, staff_id, last_name, username) values ('Torin', 40, 'Waith', 'twaith13');
+insert into staff (first_name, staff_id, last_name, username) values ('Flory', 41, 'Kynd', 'fkynd14');
+insert into staff (first_name, staff_id, last_name, username) values ('Iolanthe', 42, 'Gianuzzi', 'igianuzzi15');
+insert into staff (first_name, staff_id, last_name, username) values ('Morie', 43, 'McKilroe', 'mmckilroe16');
+insert into staff (first_name, staff_id, last_name, username) values ('Jordan', 44, 'Philippart', 'jphilippart17');
+insert into staff (first_name, staff_id, last_name, username) values ('Yolanda', 45, 'Lovart', 'ylovart18');
+insert into staff (first_name, staff_id, last_name, username) values ('Almeda', 46, 'Rowlatt', 'arowlatt19');
+insert into staff (first_name, staff_id, last_name, username) values ('Gerrard', 47, 'Bellison', 'gbellison1a');
+insert into staff (first_name, staff_id, last_name, username) values ('Valina', 48, 'Etherton', 'vetherton1b');
+insert into staff (first_name, staff_id, last_name, username) values ('Reagan', 49, 'Candish', 'rcandish1c');
+insert into staff (first_name, staff_id, last_name, username) values ('Miguelita', 50, 'Barcroft', 'mbarcroft1d');
+
